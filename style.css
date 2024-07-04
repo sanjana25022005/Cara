@@ -1,0 +1,1225 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+}
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+h6 {
+    font-weight : 700;
+    font-size: 12px;
+}
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}  
+.section-p1 {
+    padding: 40px 80px;
+}  
+.section-m1 {
+    margin: 40px 0;
+}
+/*global styling for buttons(for banner section button)*/
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;/*Changes mouse cursor to a pointer*/
+    border: none;
+    outline: none;
+    transition: 0.2s;
+} 
+/*Styling for the button in sm-banner section*/
+button.white {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
+} 
+body {
+    width: 100%;
+}
+/*till here from beginning it's default*/
+
+
+/* Nav bar(1st box/section) */
+#header {
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);/*shadow below the 1st box*/
+    z-index: 999; /*for showing the shadow if it's gone*/
+    position: sticky;/*for the navbar to stay rigid even when scrolling*/
+    top: 0;
+    left: 0;
+}
+/*for alligning home,shop,etc in one row and not in column wise*/
+#navbar {
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li {
+    list-style: none; /*for removing bullet points*/
+    padding: 0 20px;/*spaces between home, shop,etc */
+    position: relative;/*for the underline blow home,etc to be at correct position*/
+}
+#navbar li a {
+    text-decoration: none; /*for removing underlines*/
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;/*text color*/
+    transition: 0.3s ease; /*transition from black to green to be smooth*/
+}
+/* for color changing when we move mouse over(black to green) */
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178
+}
+/* for underlining effect when we move mouse over */
+#navbar li a.active::after,
+#navbar li a:hover::after { /*for the underline to be shown below shop,etc as we hover*/
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+/*For the sake of mobile view, we do some changes, for avoiding the changes to reflect on website mode*/
+#mobile {
+    display: none;
+    align-items: center;
+}
+/*To remove the x icon in website view*/
+#close {
+    display: none;
+}
+
+/* Hero section(2nd box / section)*/
+#hero {
+    background-image: url(img/hero4.png); /*for adding background image*/
+    /* for alligning the image*/
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px; /*for adding space from left[text]*/
+    /*Text to be shown in middle of section*/
+    display: flex;
+    flex-direction: column; /*text printed in column wise but not in a row*/
+    align-items: flex-start;
+    justify-content: center;
+}
+#hero h2 {
+    padding-bottom: 15px; /*for adding apce below h2 line*/
+}
+#hero h1 {
+    color : #088178; /*text color*/
+}
+#hero button {
+    background-image: url(img/button.png); /*for adding background img for the button*/
+    background-color: transparent;
+    color: #088178;
+    border: 0; /*for removing the box around the button(shop now)*/
+    padding: 14px 80px 14px 65px; /*for setting the background image at correct position*/
+    /*styling for button*/
+    background-repeat: no-repeat;
+    cursor: pointer; /*Changes mouse cursor to a pointer*/
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/*Feature section(3rd box / section)*/
+/*For aligning boxes in one row*/
+#feature {
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/*styling for those boxes*/
+#feature .fe-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+#feature .fe-box:hover {
+    /*for incresing the box radius and to give another color shadow when we move mouse over the boxes*/
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1); 
+}
+/*for making image responsive*/
+#feature .fe-box img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+/*for adding background box for h6*/
+#feature .fe-box h6 {
+    display: inline-block; /*correcting padding of background color of h6*/
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+/* for changing background colors for h6 boxes */
+#feature .fe-box:nth-child(2) h6 {
+    background-color: #cbebbc;
+}
+#feature .fe-box:nth-child(3) h6 {
+    background-color: #d1e8f2;
+}
+#feature .fe-box:nth-child(4) h6 {
+    background-color: #cdd4f8;
+}
+#feature .fe-box:nth-child(5) h6 {
+    background-color: #f6dbf6;
+}
+#feature .fe-box:nth-child(6) h6 {
+    background-color: #fff2e5;
+}
+
+/*Product section(4th and 6th box / section)*/
+/*for showing the text in middle in the product section*/
+#product1 {
+    text-align: center;
+}
+/*for alligning the pictures in a row*/
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap; /*to break the 8 images as 4, 4 in seperate rows*/
+}
+/*for forming a box around the img and text*/
+#product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border:1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer; /*Changes mouse cursor to a pointer*/
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease; /*for smooth transition of shadow changing*/
+    position: relative; /*for setting that cart icon in correct position*/
+}
+/*for adding hover effect as we move mouse over*/
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+/*img is way big so, fit it in the box*/
+#product1 .pro img {
+    width : 100%;
+    border-radius: 20px;
+}
+#product1 .pro .des {
+    text-align: start;/*aligns text to the left(en is read from left to right)*/
+    padding: 10px 0;
+}
+/*for styling adidias*/
+#product1 .pro .des span {
+    color: #606063;
+    font-size: 12px;
+}
+/*for styling h5*/
+#product1 .pro .des h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+/*styling for the stars*/
+#product1 .pro .des i {
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+/*styling for h4*/
+#product1 .pro .des h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+/*Styling for cart icon*/
+#product1 .pro .cart {
+    width:40px ;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    bottom: 20px;
+    right: 10px;
+}
+
+/*Banner section(5th box / section)*/
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(img/banner/b2.jpg);
+    /*for aligning the picture*/
+    width: 100%;
+    height : 40vh;
+    background-size: cover;
+    background-position: center;
+}
+/*for styling h4*/
+#banner h4 {
+    color: #fff;
+    font-size: 16px;
+}
+/*for styling h2*/
+#banner h2 {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+}
+/*for adding red color for "70% Off" in h2*/
+#banner h2 span {
+    color: #ef3636;
+}
+/*Apply hover effect, the color of button changes as we move mouse over*/
+#banner button:hover {
+    background: #088178;
+    color: #fff;
+}
+
+/*sm-banner section(7th box / section)*/
+/*For the two banner to be in one row*/
+#sm-banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#sm-banner .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /*To show the text on left side on the banner*/
+    background-image: url(img/banner/b17.jpg);
+    /*for aligning the picture*/
+    min-width: 580px;
+    height : 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px; /*for text*/
+}
+/*To add another background-img for banner 2 without changing the style as banner 1*/
+#sm-banner .banner-box2 {
+    background-image: url(img/banner/b10.jpg);
+}
+/*For styling the text inside the banner*/
+#sm-banner h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+#sm-banner h2 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+}
+#sm-banner span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+/*for hover effect when we move mouse on picture then button color changes to green*/
+#sm-banner .banner-box:hover button {
+    background: #088178;
+    border: 1 px solid #088178;
+}
+
+/*banner-3 section(8th box / section)*/
+#banner-3 .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /*To show the text on left side on the banner*/
+    background-image: url(img/banner/b7.jpg);
+    /*for aligning the picture*/
+    min-width: 30%;
+    height : 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px; /*for text*/
+    margin-bottom: 20px;
+}
+/*For the three banner to be in one row*/
+#banner-3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+/*For styling the etxt on the banners*/
+#banner-3 h2 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 900;
+}
+#banner-3 h3 {
+    color: #ec5443;
+    font-size: 15px;
+    font-weight: 800;
+}
+/*To add another background-img for banner 2 & 3 without changing the style as banner 1*/
+#banner-3 .banner-box2 {
+    background-image: url(img/banner/b4.jpg);
+}
+#banner-3 .banner-box3 {
+    background-image: url(img/banner/b18.jpg);
+}
+
+/* newsletter section(9th box / section) */
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(img/banner/b14.png);
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+}
+/*For adding styling for text*/
+#newsletter h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+#newsletter p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+}
+#newsletter p span {
+    color: #ffbd27;
+}
+/*styling for the box which takes email as input*/
+#newsletter input {
+    height: 3.125rem;
+    width: 100%;
+    padding: 0 1.25em;
+    font-size: 13.2px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    Outline: none;
+    /*for removing the curve on the box on right side of placeholder*/
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+/*For adding different color for button*/
+#newsletter button {
+    background-color: #088178;
+    color : #fff;
+    white-space: nowrap;
+    /*for removing the curve on the box on left side of button*/
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+/*For aligning button and placeholder in a single row*/
+#newsletter .form {
+    display: flex;
+    width: 40%; /*for incresing width of placeholder to it's original size after modification*/
+}
+
+/* footer section(10th box / section) */
+/*To print all columns in a single row*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/*for displaying the hyperlinks of eachs ection in column wise*/
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    margin-bottom: 20px;
+}
+/*To add a space below cara logo*/
+footer .logo {
+    margin-bottom: 30px;
+}
+/*Styling for all the h4 headings*/
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+/*Styling for all paragraphs*/
+footer h4 {
+    font-size: 13px;
+    margin: 0/*top*/ 0/*right*/ 8px/*bottom*/ 0/*left*/;
+}
+/*For anchor tags(links)*/
+footer a {
+    font-size: 13px;
+    text-decoration: none;/*For removing the underlines below links*/
+    color: #222;
+    margin-bottom: 10px;
+}
+/*For adding space above those icons*/
+footer .follow {
+    margin-top: 20px;
+}
+/*For adding colors for icons in About section*/
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer; /*Changes mouse cursor to a pointer*/
+}
+/*For adding border for both images*/
+footer .install .row img {
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+/*For adding space above and below those images in insall column*/
+footer .install img {
+    margin: 10px 0 15px 0;
+}
+/*for hover effect for icons and links*/
+footer .follow i:hover,
+footer a:hover{
+    color: #088178;
+}
+/*for aligning the copyright paragraph to center*/
+footer .copyright {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+/*shop.html*/
+
+/*For styling 2nd section(hero)*/
+#page-header {
+    background-image: url(img/banner/b1.jpg);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+#page-header h2,
+#page-header p {
+    color: #fff;
+}
+#pagination {
+    text-align: center;
+}
+#pagination a{
+    text-decoration: none;/*for removing underlines*/
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+#pagination a i{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+
+
+
+/*sproduct.html*/
+
+/*For aligning bothe details and pictures accordingly*/
+#prodetails {
+    display: flex;
+    margin-top: 20px;
+}
+/*For adjusting the big picture on left side*/
+#prodetails .single-pro-image {
+    width: 40%;
+    margin-right: 50px;
+}
+/*To align the smaller images in 1 row*/
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+/*To add space btw those small images*/
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;/*Changes cursor to pointer*/
+}
+/*For the right side details to occupy only half of the page*/
+#prodetails .single-pro-details {
+    width: 50%;
+    margin-top: 30px;
+}
+/*For styling the text on right side*/
+#prodetails .single-pro-details h4 {
+    padding: 40px 0 20px 0;
+}
+#prodetails .single-pro-details h2 {
+    font-size: 26px;
+}
+#prodetails .single-pro-details select {
+    display: block;/*makes an element take up the full width available and start on a new line*/
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+/*For styling the input button(to inc/dec no. of items)*/
+#prodetails .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    font-size: 16px;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+/*To remove the default outline/border around input section that appears after clicking*/
+#prodetails .single-pro-details input:focus {
+    outline : none;
+}
+/*For adding diff color to the button*/
+#prodetails .single-pro-details button {
+    background: #088178;
+    color: #fff;
+}
+#prodetails .single-pro-details span {
+    line-height: 25px; /*adds spaces between each line in para*/
+}
+
+
+
+
+
+
+/*Styling for blog.html*/
+
+/*page-header styling should be present in blog-header too so we write #page-header*/
+#page-header.blog-header {
+    background-image: url("img/banner/b19.jpg");
+}
+#blog {
+    padding: 150px 150px 0 150px; /*For adding space around pic and content*/
+}
+/*For showing picture and content in same row*/
+#blog .blog-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-bottom: 90px;
+}
+/*For styling image*/
+#blog .blog-img {
+    width: 50%;
+    margin-right: 40px;
+}
+#blog img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+/*For styling the content*/
+#blog .blog-details {
+    width: 50%;
+}
+#blog .blog-details a {
+    text-decoration: none;
+    font-size: 11px;
+    color: #000;
+    font-weight: 700;
+    position: relative; /*To remove that slider after adding that line after continue reading text*/
+    transition: 0.3s; /*For smooth transition*/
+}
+/*For printing the underline after continue reading*/
+#blog .blog-details a::after {
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 4px;
+    right: -60px;
+}
+/*To add hover effect for continue reading text*/
+#blog .blog-details a:hover {
+    color: #088178;
+
+}
+/*Hover effect for line*/
+#blog .blog-details a:hover::after {
+    background-color: #088178;
+}
+#blog .blog-box h1 {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    color: #c9cbce;
+    z-index: -9; /*For the text to print behind the image*/
+}
+
+
+
+
+
+
+/*Styling for about.html*/
+
+#page-header .about-header {
+    background-image: url("img/about/banner.png");
+}
+#about-head {
+    display: flex;
+    align-items: center;
+}
+/*For space between image and text*/
+#about-head div {
+    padding-left: 40px;
+}
+#about-head img {
+    width: 50%;
+    height: auto;
+}
+#about-app {
+    text-align: center;
+}
+#about-app .video {
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+#about-app .video video {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+/*Styling for contact.html*/
+
+#contact-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#contact-details .details {
+    width: 40%;
+}
+#contact-details .details span,
+#form-details form span {
+    font-size: 12px;
+}
+#contact-details .details h2,
+#form-details form h2 {
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+#contact-details .details h3 {
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+#contact-details .details li {
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+#contact-details .details li i {
+    font-size: 14px;
+    padding-right: 22px;
+}
+#contact-details .details li p {
+    margin: 0;
+    font-size: 14px;
+}
+#contact-details .map {
+    width: 55%;
+    height: 400px;
+}
+#contact-details .map iframe{
+    width: 100%;
+    height: 100%;
+}
+/*Styling for the form*/
+#form-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+}
+#form-details form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#form-details form input,
+#form-details form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+#form-details form button {
+    background-color: #088178;
+    color: #fff;
+}
+/*For styling the people section(right to form section)*/
+#form-details .people div {
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+#form-details .people div img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+#form-details .people div p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 25px;
+}
+#form-details .people div p span {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+
+
+
+
+
+/*For styling cart.html*/
+#cart {
+    overflow-x: auto; /*Div tag is fixed but middle section(table) can be moved*/
+}
+#cart table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+#cart table img {
+    width: 70px;
+}
+/*For individual styling of each element in a row*/
+#cart table td:nth-child(1) {
+    width: 100px;
+    text-align: center;
+}
+#cart table td:nth-child(2) {
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(3) {
+    width: 250px;
+    text-align: center;
+}
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6) {
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(5) input {
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+/*For styling the tevil header inside table*/
+#cart table thead {
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+#cart table thead td {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+/*For adding space between thead and tbody*/
+#cart table tbody tr td {
+    padding-top: 15px;
+}
+#cart table tbody td {
+    font-size: 13px;
+}
+/*For aligning the coupon and total section in one row*/
+#cart-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/*For styling coupon section*/
+#coupon {
+    width: 50%;
+    margin-bottom: 30px;
+}
+#coupon h3,
+#subtotal h3 {
+    padding-bottom: 15px;
+}
+#coupon input {
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #e2e9e1;
+}
+#coupon button,
+#subtotal button {
+    background-color: #088178;
+    color: #fff;
+    padding: 12px 20px;
+}
+/*For styling the total section*/
+#subtotal {
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+#subtotal table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#subtotal table td {
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+}
+
+
+
+
+
+/*ipad view*/
+
+/*When we inspect webiste in different modes like ipad, we have to make few changes in appearance*/
+/*For that we have to add Media query*/
+@media (max-width: 799px) {
+    /*When viewd on ipad the links home, shop, etc in navbar appear differently 
+    in a single column with a fixed navbar to the right side |_|(like this)*/
+    .section-p1 {
+        padding: 40px 40px;
+    }
+    #navbar {
+        display : flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;/*To hide the navbar, it appears only when we click on hamburger menu*/
+        height: 100vh;
+        width: 300px;
+        background-color: #e3e6f3;
+        box-shadow: 0/*from x*/ 40px/*from y*/ 60px/*radius*/ rgba(0,0,0,0.1);
+        padding: 80px 0 0 10px; /*to add space between top and the start of home in navbar(vertical)*/
+        transition: 0.3s; /*To show the sliding effect*/
+    }
+    /*after adding javascript code, we have to create an active class to show the effect*/
+    #navbar .active {
+        right: 0px; /*To show it after clicking icon*/
+    }
+    /*to add spaces between home, shop, etc in navbar*/
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    /*For the changes to reflect on ipad mode*/
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+    /*for adding styling for those icons*/
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    /*For aligning the x-mark icon in correct position*/
+    #close {
+        display: initial; /*to show x button in ipad view if it dissappers*/
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 20px;
+    }
+    /*To remove bag icon in ipad view*/
+    #lg-bag {
+        display: none;
+    }
+
+    /*For correcting the hero section according to ipad view*/
+    #hero {
+        height: 70vh;
+        background-position: top 30% right 30%;
+        padding: 0 80px; /*for adding space from left[text]*/
+    }
+
+    /*For correcting the 3rd section, feature section*/
+    #feature {
+        justify-content: center;
+    }
+    #feature .fe-box {
+        margin: 15px 15px;
+    }
+
+    /*For correcting the 4th section, product section acc to ipad view*/
+    #product1 .pro-container {
+        justify-content: center;
+    }
+    /*for adding spaces btw the images after aligning them in center*/
+    #product1 .pro {
+        margin: 15px;
+    }
+
+    /*For decresing height of banner in 5th section i.e banner section*/
+    #banner {
+        height : 20vh;
+    }
+
+    /*For alligning the banners in column wise but to take correct dimentions in 7th section(sm-banner)*/
+    #sm-banner .banner-box {
+        min-width: 100%;
+        height : 30vh;
+    }
+
+    /*For coorecting 8th section that is banner-3 section*/
+    #banner-3 {
+        padding: 0 40px;/*For decresing the space from left and right*/
+    }
+    #banner-3 .banner-box {
+        width: 28%; /*To align banners in a single row*/
+    }
+
+    /*For correcting 9th section that is newsletter section*/
+    #newsletter .form {
+        width: 70%; /*To increase the width of placeholder in ipad view*/
+    }
+
+    /*For contact page*/
+    #form-details {
+        padding: 40px;
+    }
+    #form-details form {
+        width: 50%;
+    }
+}
+
+
+
+/*Mobile view*/
+
+
+
+@media (max-width: 477px) {
+    .section-p1 {
+        padding: 20px;/*adjust global padding, for pictures in feature section,etc*/
+    }
+    /*For correcting the 1st section(navbar) acc to mobile view*/
+    #header {
+        padding: 10px 30px;/*for decresing extra padding*/
+    }
+
+    /*For correcting the 2nd section(hero) acc to mobile view*/
+    /*For decresing font size acc to mobile view*/
+    h1 {
+        font-size: 38px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    /*for aligning the image and text acc to mobile view*/
+    #hero {
+        background-position: 55%;
+        padding: 0 20px;
+    }
+
+    /*For correcting the 3rd section(feature) acc to mobile view*/
+    /*for aligning 2 2 pictures in a row*/
+    #feature .fe-box {
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+    #feature {
+        justify-content: space-between;/*To ad space between each pic in each row*/
+    }
+
+    /*For correcting the 4th and 6th section(products) acc to mobile section*/
+    #product1 .pro {
+        width: 100%;/*Single product takes whole width*/
+    }
+
+    /*For correcting the 5th section(banner) acc to mobile view*/
+    #banner {
+        height: 40vh;/*To increase banner height*/
+    }
+
+    /*For correcting the 7th section(sm-banner) acc to mobile view*/
+    #sm-banner .banner-box{
+        height: 40vh; /*To increase banner height*/
+    }
+    #sm-banner .banner-box2 {
+        margin-top: 20px;/*To print gap between 2 banners*/
+    }
+
+    /*For correcting the 8th section(banner-3) acc to mobile view*/
+    #banner-3 {
+        padding: 0 20px;/*To decrease extra spaces around banner*/
+    }
+    #banner-3 .banner-box {
+        width: 100%; /*each banner is displayed in column wise*/
+    }
+
+    /*For correcting 9th section that is newsletter section acc to mobile view*/
+    #newslettern{
+        padding: 40px 20px; /*For increasing padding*/
+    }
+    #newsletter .form {
+        width: 100%; /*To increase the width of placeholder in ipad view*/
+    }
+
+    /*Correcting footer section*/
+    footer .copyright {
+        text-align: start;/*To display copyright sentence to left side*/
+    }
+
+    /*For single product in mobile view*/
+    #prodetails {
+        display: flex;
+        flex-direction: column; /*To align all items in a single column*/
+    }
+    /*To increse width of image & text and to decrese margin right*/
+    #prodetails .single-pro-image {
+        width: 100%;
+        margin-right: 0px;
+    }
+    #prodetails .single-pro-details {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    /*Blog page*/
+    #blog {
+        padding: 100px 20px 0 20px; /*To decrese padding*/
+    }
+    /*To align pictures and texts in column wise manner*/
+    #blog .blog-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #blog .blog-img {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 30px; 
+    }
+    #blog .blog-details {
+        width: 100%;
+    }
+
+    /*About page*/
+    #about-head {
+        flex-direction: column;
+    }
+    #about-head img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #about-head div {
+        padding-left: 0px;
+    }
+    #about-app .video {
+        width: 100%
+    }
+
+    /*Contact page*/
+    #contact-details {
+        flex-direction: column;
+    }
+    #contact-details .details {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #contact-details .map {
+        width: 100%;
+    }
+    #form-details {
+        margin: 10px;
+        padding: 30px 10px;
+        flex-wrap: wrap;
+    } 
+    #form-details form {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    /*Cart page*/
+    #cart-add {
+        flex-direction: column;
+    }
+    #coupon{
+        width: 100%;
+    }
+    #subtotal {
+        width: 100%;
+        padding: 20px;
+    }
+}

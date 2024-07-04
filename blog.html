@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample E-Commerce Website</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css"/>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <!-- For creating the navbar at the top -->
+    <section id="header">
+        <a href = "#"><img src = "img/logo.png" class = "logo" alt = " "></a>
+        <div> 
+            <ul id = "navbar">
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "shop.html">Shop</a></li>
+                <li><a class = "active" href = "blog.html">Blog</a></li>
+                <li><a href = "about.html">About</a></li>
+                <li><a href = "contact.html">Contact</a></li>
+                <li id ="lg-bag"><a href = "cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <!--To add a close button in mobile view for closing navbar-->
+                <a href = "#" id = "close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <!--When viewing on ipad the outlay should be diff so the nav bar appears vertically
+        and so we add a hamburger icon and only when we click on that navbar appears on right side-->
+        <div id="mobile">
+            <!--For the cart icon to appear before the hamburger menu icon-->
+            <a href = "cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fa-solid fa-outdent"></i>
+        </div>
+    </section>
+    <!-- for creating the next section(box) that is hero section -->
+    <section id="page-header" class = "blog-header">
+        <h2>#Read More</h2>
+        <p>Read all the case studies about our products!</p>
+    </section>
+    <!--for creating different blog contents and pictures-->
+    <section id = "blog">
+        <div class="blog-box">
+            <div class = "blog-img"> <!--We have 2 seperate sections pictures on left side and content on right side so we have to create 2 div tags-->
+                <img src = "img/blog/b1.jpg" alt = "">
+            </div>
+            <div class = "blog-details">
+                <h4>The cotton-Jersey Zip Up Hoodie</h4>
+                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+                <a href = "#">CONTINUE READING</a>
+            </div>
+            <h1>13/01</h1>
+        </div>
+        <div class="blog-box">
+            <div class = "blog-img"> <!--We have 2 seperate sections pictures on left side and content on right side so we have to create 2 div tags-->
+                <img src = "img/blog/b2.jpg" alt = "">
+            </div>
+            <div class = "blog-details">
+                <h4>How to style a Quiff</h4>
+                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+                <a href = "#">CONTINUE READING</a>
+            </div>
+            <h1>13/04</h1>
+        </div>
+        <div class="blog-box">
+            <div class = "blog-img"> <!--We have 2 seperate sections pictures on left side and content on right side so we have to create 2 div tags-->
+                <img src = "img/blog/b3.jpg" alt = "">
+            </div>
+            <div class = "blog-details">
+                <h4>Must-Have Skater Girl Items</h4>
+                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+                <a href = "#">CONTINUE READING</a>
+            </div>
+            <h1>12/01</h1>
+        </div>
+        <div class="blog-box">
+            <div class = "blog-img"> <!--We have 2 seperate sections pictures on left side and content on right side so we have to create 2 div tags-->
+                <img src = "img/blog/b4.jpg" alt = "">
+            </div>
+            <div class = "blog-details">
+                <h4>Runway Inspired Trends</h4>
+                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+                <a href = "#">CONTINUE READING</a>
+            </div>
+            <h1>16/01</h1>
+        </div>
+        <div class="blog-box">
+            <div class = "blog-img"> <!--We have 2 seperate sections pictures on left side and content on right side so we have to create 2 div tags-->
+                <img src = "img/blog/b5.jpg" alt = "">
+            </div>
+            <div class = "blog-details">
+                <h4>AW20 Mensware Trends</h4>
+                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+                <a href = "#">CONTINUE READING</a>
+            </div>
+            <h1>10/03</h1>
+        </div>
+    </section>
+    <!--for creating 3 boxes indicating 1,2,-> for going through products indicating diff pages-->
+    <section id="pagination" class="section-p1">
+        <a href = "#">1</a>
+        <a href = "#">2</a>
+        <a href = "#"><i class="fa-solid fa-arrow-right-long"></i></a>
+    </section>
+    <!-- for creating the 9th section(box) that is newsletter section -->
+    <section id="newsletter" class = "section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up for Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button><!--global styling directly from style.css-->
+        </div>
+    </section>
+    <!-- Footer section -->
+    <footer class="section-p1">
+        <!--For 1st column-->
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <!--Word written in strong tag is somewhat bold compared to other sentence-->
+            <p><strong>Address: </strong>562 Wellington Road, Street 32, San Francisco</p>
+            <p><strong>Phone: </strong> +01 2222 365 /(+91) 01 2345 6789</p>
+            <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <!--For the icons-->
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest-p"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <!--For 2nd column-->
+        <div class="col">
+            <h4>About</h4>
+            <!--They are links, redirects to other page-->
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <!--They are links, redirects to other page-->
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>© 2024 Cara. Unauthorized use of website content is prohibited.</p>
+        </div>
+    </footer>
+    <script src = "script.jss"></script>
+</body>
+</html>

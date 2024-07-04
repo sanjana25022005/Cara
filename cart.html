@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample E-Commerce Website</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css"/>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <!-- For creating the navbar at the top -->
+    <section id="header">
+        <a href = "#"><img src = "img/logo.png" class = "logo" alt = " "></a>
+        <div> 
+            <ul id = "navbar">
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "shop.html">Shop</a></li>
+                <li><a href = "blog.html">Blog</a></li>
+                <li><a href = "about.html">About</a></li>
+                <li><a href = "contact.html">Contact</a></li>
+                <li id ="lg-bag"><a class = "active" href = "cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <!--To add a close button in mobile view for closing navbar-->
+                <a href = "#" id = "close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <!--When viewing on ipad the outlay should be diff so the nav bar appears vertically
+        and so we add a hamburger icon and only when we click on that navbar appears on right side-->
+        <div id="mobile">
+            <!--For the cart icon to appear before the hamburger menu icon-->
+            <a href = "cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fa-solid fa-outdent"></i>
+        </div>
+    </section>
+    <!-- for creating the next section(box) that is hero section -->
+    <section id="page-header" class = "about-header">
+        <h2>#Let's Talk</h2>
+        <p>LEAVE A MESSAGE, We love to hear from you!</p>
+    </section>
+    <!--For creating middle section-->
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href ="#"><i class="fa-regular fa-circle-xmark"></i></a></td>
+                    <td><img src="img/products/f1.jpg" alt=""></td>
+                    <td>Cartoon Astronaut T-Shirts</td>
+                    <td>$ 118.19</td>
+                    <td><input type="number" value="1"></td>
+                    <td>$ 118.19</td>
+                </tr>
+                <tr>
+                    <td><a href ="#"><i class="fa-regular fa-circle-xmark"></i></a></td>
+                    <td><img src="img/products/f4.jpg" alt=""></td>
+                    <td>Trendy Florel Prints</td>
+                    <td>$ 118.19</td>
+                    <td><input type="number" value="1"></td>
+                    <td>$ 118.19</td>
+                </tr>
+                <tr>
+                    <td><a href ="#"><i class="fa-regular fa-circle-xmark"></i></a></td>
+                    <td><img src="img/products/f8.jpg" alt=""></td>
+                    <td>Classy Cotton T-Shirt</td>
+                    <td>$ 118.19</td>
+                    <td><input type="number" value="1"></td>
+                    <td>$ 118.19</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!--For creating the coupon section and total section-->
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter Coupon Code">
+                <button class="normal">Apply</button>
+            </div>
+        </div>
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>$ 335</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>$ 335</strong></td>
+                </tr>
+            </table>
+            <button class="normal">Proceed to Checkout</button>
+        </div>
+    </section>
+    <!-- Footer section -->
+    <footer class="section-p1">
+        <!--For 1st column-->
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <!--Word written in strong tag is somewhat bold compared to other sentence-->
+            <p><strong>Address: </strong>562 Wellington Road, Street 32, San Francisco</p>
+            <p><strong>Phone: </strong> +01 2222 365 /(+91) 01 2345 6789</p>
+            <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <!--For the icons-->
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-pinterest-p"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <!--For 2nd column-->
+        <div class="col">
+            <h4>About</h4>
+            <!--They are links, redirects to other page-->
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <!--They are links, redirects to other page-->
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>© 2024 Cara. Unauthorized use of website content is prohibited.</p>
+        </div>
+    </footer>
+    <script src = "script.jss"></script>
+</body>
+</html>
